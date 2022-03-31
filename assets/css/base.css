@@ -6,6 +6,7 @@
 }
 * {
     box-sizing: inherit;
+    
 }
 /* rem phu thuoc vo the html */
 html{
@@ -16,7 +17,7 @@ html{
 }
 
 .grid {
-    width: 1200px;
+    width: 1400px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -26,5 +27,16 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+}
+/* ANIMATION */
+@keyframes fadeIn
+{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
 }
 

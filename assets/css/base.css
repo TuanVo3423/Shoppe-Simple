@@ -3,6 +3,7 @@
     --white-color : #fff;
     --black-color : #000;
     --text-color : #333;
+    --border-color: #dbdbdb;
 
 
 
@@ -43,3 +44,56 @@ html{
     }
 }
 
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.modal__overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0, 0, 0.4);
+}
+.modal__body{
+    position: relative;
+    z-index: 1;
+    margin: auto;
+   
+}
+.btn{
+    min-width: 142px;
+    height: 34px;
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    padding: 0 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn.btn--disabled{
+    color: #ccc;
+    cursor: default;
+    background-color: #999;
+}
+.btn--size-s{
+    height: 30px;
+    font-size: 12px;
+    
+
+}

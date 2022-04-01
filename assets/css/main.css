@@ -21,7 +21,6 @@
 .header__navbar-item,
 .header__navbar-icon{
     display: inline-flex;
-    text-align: center;
 }
 .header__navbar-item-link:hover,
 .header__navbar-item:hover{
@@ -100,6 +99,115 @@
 }
 .header__qr-download-img{
     height: 15px;
-
 }
+/* NOTIFICATION */
+.header__navbar-item--has-notify{
+    position: relative;
+}
+.header__navbar-item--has-notify:hover .header__notify
+{
+    display: block;
+}
+.header__notify{
+    width: 404px;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 140%;
+    right: 0;
+    border: 1px #d3d3d3 solid;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+}
+.header__notify::before{
+    content: "";
+    border-style: solid;
+    border-width: 20px 30px;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0;
+    top: -27px;
+}
+.header__notify::after{
+    content: "";
+    position: absolute;
+    width: 84px;
+    height: 12px;
+    right: 0;
+    top: -10px;
+}
+.header__notify-title{
+    height: 40px;
+    background-color: var(--white-color);
+}
+.header__notify-title h3{
+    color:#999;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    user-select: none;
+}
+.header__notify-list{
+    padding-left: 0;
+}
+.header__notify-link{
+    display: flex;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+   
+}
+.heder__notify-info{
+    margin-left: 12px;
+}
+.header__notify-item{
+    display: flex;
+}
+.header__notify-item:hover{
+    background-color: #f7f7f7;
+}
+.header__notify-item--viewed{
+    background-color: rgb(238, 77, 45 , 0.08);
+}
+.hedder__notify-img{
+    width: 48px;
+    object-fit: contain;
+}
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+.header__notify-description{
+    display: block;
+    font-size: 1.2rem;
+    color: #756f6e ;
+}
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.header__notify-footer{
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
 

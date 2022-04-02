@@ -22,6 +22,8 @@ html{
     box-sizing: border-box;
 }
 
+
+/* Responsive */
 .grid {
     width: 1400px;
     max-width: 100%;
@@ -34,6 +36,7 @@ html{
     display: flex;
     flex-wrap: wrap;
 }
+
 /* ANIMATION */
 @keyframes fadeIn
 {
@@ -83,7 +86,7 @@ html{
    
 }
 .btn{
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     border: none;
     text-decoration: none;

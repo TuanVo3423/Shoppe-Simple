@@ -4,8 +4,10 @@
     --black-color : #000;
     --text-color : #333;
     --border-color: #dbdbdb;
-
-
+    --header-height : 120px;
+    --navbar-height :28px;
+    --header-with-logo-height : calc(var(--header-height) - var(--navbar-height));
+    
 
 }
 * {
@@ -44,6 +46,17 @@ html{
     }
 }
 
+@keyframes Growth
+{
+    from{
+        transform: scale(var(--growth-from));
+
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
 /* MODAL */
 .modal{
     position: fixed;
@@ -58,11 +71,15 @@ html{
     height: 100%;
     width: 100%;
     background-color: rgba(0,0, 0, 0.4);
+    animation: fadeIn linear 0.1s;
 }
 .modal__body{
+    --growth-from : 0.7;
+    --growth-to : 1;
     position: relative;
     z-index: 1;
     margin: auto;
+    animation: Growth linear 0.1s ;
    
 }
 .btn{

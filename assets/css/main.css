@@ -148,6 +148,8 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in 0.3s;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .header__qr::before{
     content: "";
@@ -467,6 +469,7 @@
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.2);
     display: none;
+    z-index: 1;
     animation: fadeIn ease-in 0.2s;
 }
 .header__cart-list--no-cart{
@@ -516,6 +519,8 @@
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
+    max-height: 56vh;
+    overflow-y: auto;
 }
 .header__cart-item{
     display: flex;
@@ -548,6 +553,17 @@
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
+    flex: 1;
+    line-height: 2rem;
+    padding-right: 1.6rem;
+    flex: 1;
+    max-height: 4rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    text-align: left;
+    align-items: center;
 
 }
 .header__cart-item-price-wrap{
@@ -631,6 +647,7 @@
     box-shadow: 0 1px 5px #666 ;
    border-radius: 2px;
    display: none;
+   z-index: 1;
 }
 .header__search-input:focus ~.header__search-history{
     display: block;
@@ -712,6 +729,7 @@
     /* overflow: hidden; */
     display: none;
     animation: fadeIn ease-in 0.2s;
+    z-index: 1;
 
 }
 .header__search-select-has-option::after{
@@ -803,6 +821,18 @@
     left: 8px;
 }
 .category-item{
+    position: relative;
+}
+.category-item::after{
+    content: "";
+    position: absolute;
+    border: 1px solid #E1E1E1;
+    left: 16px;
+    right: 16px;
+    top: 0;
+}
+.category-item:first-child::after{
+    border: none;
 }
 .category__link{
     position: relative;
@@ -810,7 +840,7 @@
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--text-color);
-    padding: 4px 16px;
+    padding: 8px 16px;
     right: 0;
     transition: linear 0.1s;
 }
@@ -881,10 +911,27 @@
 }
 
 /* Product item */
+.home-product{
+    margin-bottom: 10px;
+}
 .home-product-item{
     background-color: var(--white-color);
     margin-top: 10px;
     position: relative;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.01);
+    transition: transform linear 0.1s;
+    will-change: transform;
+    text-decoration: none;
+    display: block;
+}
+.home-product-item-wrapper{
+    margin-bottom: 10px;
+}
+.home-product-item:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
 }
 .home-product-item-img{
     background-repeat: no-repeat;
